@@ -1,0 +1,201 @@
+.container {
+    width: 300px;
+    height: 300px;
+    padding: 20px;
+    background-color: rgb(40, 192, 215);
+    display: grid;
+    grid-gap: 20px;
+    margin: 150px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.same {
+    background-color: transparent;
+    border: 2px solid rgb(228, 75, 75);
+    color: white;
+    display: grid;
+    font-weight: bold;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    align-items: center;
+    position: relative;
+    z-index: 0;
+}
+
+.same span {
+    z-index: 1;
+}
+
+.same .origin {
+    position: absolute;
+    background-color: red;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.tl .origin {
+    top: -5px;
+    left: -5px;
+}
+
+.tc .origin {
+    top: -5px;
+    left: calc(50% - 5px);
+}
+
+.tr .origin {
+    top: -5px;
+    right: -5px;
+}
+
+.cl .origin {
+    top: calc(50% - 5px);
+    left: -5px;
+}
+
+.cc .origin {
+    top: calc(50% - 5px);
+    left: calc(50% - 5px);
+}
+
+.cr .origin {
+    top: calc(50% - 5px);
+    right: -5px;
+}
+
+.bl .origin {
+    bottom: -5px;
+    left: -5px;
+}
+
+.bc .origin {
+    bottom: -5px;
+    left: calc(50% - 5px);
+}
+
+.br .origin {
+    bottom: -5px;
+    right: -5px;
+}
+
+.tl div {
+    transition-duration: 4s;
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(0.28, 0.87, 0.7, 0.1);
+    transform-origin: left top;
+}
+
+
+.tc div {
+    transition-duration: 4s;
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(0.28, 0.87, 0.7, 0.1);
+    transform-origin: center top;
+}
+
+body:hover .same div {
+    transform: rotate(360deg);
+}
+
+.tr div {
+    transition-duration: 4s;
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(0.28, 0.87, 0.7, 0.1);
+    transform-origin: right top;
+}
+
+
+
+.cl div {
+    transition-duration: 4s;
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(0.28, 0.87, 0.7, 0.1);
+    transform-origin: left center;
+}
+
+.cc div {
+    transition-duration: 4s;
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(0.28, 0.87, 0.7, 0.1);
+    transform-origin: center center;
+}
+
+.cr div {
+    transition-duration: 4s;
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(0.28, 0.87, 0.7, 0.1);
+    transform-origin: right center;
+}
+
+.bl div {
+    transition-duration: 4s;
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(0.28, 0.87, 0.7, 0.1);
+    transform-origin: left bottom;
+}
+
+.bc div {
+    transition-duration: 4s;
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(0.28, 0.87, 0.7, 0.1);
+    transform-origin: center bottom;
+}
+
+.br div {
+    transition-duration: 4s;
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(0.28, 0.87, 0.7, 0.1);
+    transform-origin: right bottom;
+}
+
+.tc .origin {
+    top: -5px;
+    left: calc(50% - 5px);
+}
+
+.tr .origin {
+    top: -5px;
+    right: -5px;
+}
+
+.cl .origin {
+    top: calc(50% - 5px);
+    left: -5px;
+}
+
+.cc .origin {
+    top: calc(50% - 5px);
+    left: calc(50% - 5px);
+}
+
+.cr .origin {
+    top: calc(50% - 5px);
+    right: -5px;
+}
+
+.bl .origin {
+    bottom: -5px;
+    left: -5px;
+}
+
+.bc .origin {
+    bottom: -5px;
+    left: calc(50% - 5px);
+}
+
+.br .origin {
+    bottom: -5px;
+    right: -5px;
+}
+
+
+.same div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    opacity: 0.5;
+}
