@@ -1,0 +1,159 @@
+.container {
+    display: flex;
+}
+
+.E div,
+.L div {
+    background-color: #333;
+    z-index: 0;
+}
+
+.E {
+    width: 80px;
+    height: 160px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    align-content: space-between;
+    margin: 0px 20px;
+    position: relative;
+}
+
+.one {
+    grid-area: 1 / 1 / 10 / 2;
+}
+
+.two {
+    grid-area: 1 / 2 / 2 / 6;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.two,
+.three,
+.four {
+    height: 20px;
+}
+
+.three {
+    grid-area: 5 / 2 / 6 / 5;
+}
+
+.four {
+    grid-area: 9 / 2 / 10 / 6;
+}
+
+.L {
+    width: 80px;
+    height: 160px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    align-content: space-between;
+    position: relative;
+}
+
+.E:before {
+    content: "";
+    background-color: orange;
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    right: 3px;
+    top: 3px;
+    animation-name: go;
+    animation-duration: 6s;
+    animation-direction: alternate;
+    animation-play-state: both;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    z-index: 1;
+}
+
+.L:before {
+    content: "";
+    background-color: orange;
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    right: 3px;
+    bottom: 3px;
+    z-index: 1;
+    animation-name: go2;
+    visibility: hidden;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: both;
+}
+
+@keyframes go2 {
+    60% {
+        visibility: hidden;
+    }
+
+    50% {
+        transform: translateX(0px) translateY(0px);
+        visibility: visible;
+    }
+
+    60% {
+        transform: translateX(-60px);
+        visibility: visible;
+    }
+
+    80% {
+        transform: translateX(-60px) translateY(-140px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(-60px) translateY(-140px);
+        opacity: 0;
+    }
+}
+
+@keyframes go {
+    50% {
+        transform: rotateX(0deg);
+    }
+
+    63.4% {
+        transform: translateX(-60px);
+    }
+
+    71.2% {
+        transform: translateX(-60px) translateY(70px);
+    }
+
+    75.1% {
+        transform: translateY(70px);
+    }
+
+    80.1% {
+        transform: translateX(-60px) translateY(70px);
+    }
+
+    84.3% {
+        transform: translateX(-60px) translateY(140px);
+    }
+
+    87.5% {
+        transform: translateY(140px);
+    }
+
+    90.6% {
+        transform: translateX(-60px) translateY(140px);
+    }
+
+    95.8% {
+        transform: translateX(-60px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+
+
+}
